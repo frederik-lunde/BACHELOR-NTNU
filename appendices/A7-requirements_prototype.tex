@@ -1,0 +1,52 @@
+\section{Requirements After Prototype Test}
+\label{app:req-prototype}
+
+\section*{Introduction}
+The first round of hands-on prototype testing (see Section \ref{subsec:user_testing}) gave us clearer insight into what worked and what didn’t; especially when it came to layout and navigation. Based on this feedback, we added one new functional requirement (F9) and one non-functional requirement (NF5) to address issues with filtering and visual clarity.
+
+\section*{Functional requirements}
+\begin{table}[H]
+    \centering
+    \caption{Refined Functional Requirements}
+    \label{tab:functional_reqs_refined}
+    \begin{tabular}{|c|>{\raggedright\arraybackslash}p{0.75\linewidth}|c|}
+        \hline
+        \textbf{Req ID} & \textbf{Requirement Title} & \textbf{Priority} \\
+        \hline
+        F.1 & User can add, edit, and delete monitored websites via the user interface.& High \\ \hline 
+ F.2& User can set custom check interval per site.&High\\ \hline 
+ F.3 & Display HTTP status, response time, and uptime history for each website on each dashboard card.&High \\\hline
+        \hline
+        F.4& Verify that a site is actually up (beyond HTTP 200)& High \\ \hline 
+ F.8& Implement per-website overview of historical data.&High\\\hline
+        \hline
+        F.5& Trigger alerts and notifications via e-mail or sms.& Medium \\
+        \hline
+        F.6& Implement user authentication with personalized dashboards.& Medium\\
+        \hline
+        F.7& Add functionality for filtering and sorting of website cards.& Medium \\\hline \hline 
+ F.9& Let users pin websites to the top of the dashboard.&Medium\\\hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Refined Non-Functional Requirements}
+    \label{tab:nonfunctional_reqs_refined}
+    \begin{tabular}{|c|>{\raggedright\arraybackslash}p{0.75\linewidth}|c|}
+        \hline
+        \textbf{Req ID} & \textbf{Requirement Title} & \textbf{Priority} \\
+ NF.1& Support monitoring of 50+ sites without noticeable delay.&High\\\hline
+        \hline
+        NF.2& Website status must be easy to interpret at a glance.& High \\
+        \hline
+        NF.3& Interface must highlight changes in website status clearly. & High \\ \hline 
+ NF.5& Dashboard cards should be easy to understand and not overwhelm the user.&High\\
+        \hline
+        NF.4 & Ensure maintainability and clear documentation. & Medium \\\hline
+    \end{tabular}
+\end{table}
+
+\bigskip
+\noindent
+These updates were carried forward into the next development phase and shaped the version that was later tested as our MVP; see Appendix~\ref{app:req_mvp_user_test}.

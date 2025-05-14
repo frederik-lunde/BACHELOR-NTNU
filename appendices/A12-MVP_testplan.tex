@@ -1,0 +1,78 @@
+\section{Testplan for MVP (brukertest 2)}
+\label{app:mvp_testplan}
+
+\subsection*{Økt informasjon}
+\begin{tabular}{@{}ll@{}}
+\textbf{Dato:}   & 9.\ april 2025 \\[2pt]
+\textbf{Sted:}   & Headspin AS, Nedre Bakklandet 58C, Trondheim
+\end{tabular}
+
+\vspace{1em}
+\subsection*{Test team}
+\begin{table}[H]
+\centering
+\caption{Roller og ansvar}
+\label{tab:mvp-team}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Rolle} & \textbf{Navn} \\ \hline
+Testleder      & Simon Zahl \\ \hline
+Referent       & Frederik Lunde \\ \hline
+Observatør     & Ingrid‑Margrethe Theodorsen \\ \hline
+Observatør     & Bjørne Morgan Øvreås \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection*{Deltakere}
+\begin{table}[H]
+\centering
+\caption{Testpersoner (interne brukere)}
+\label{tab:mvp-participants}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{ID} & \textbf{Rolle hos Headspin} \\ \hline
+P1 & Leder web og teknologi \\ \hline
+P2 & Designer \\ \hline
+P3 & Webutvikler \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection*{Introduksjonsskript}
+\begin{quote}\itshape
+Vi skal teste MVP-versjonen av dashboardet i et realistisk scenario. Målet er å vurdere hvordan løsningen fungerer i praksis. Tenk høyt mens du arbeider, slik at vi kan få innsikt i hvordan du opplever oppgavene. Gi beskjed hvis noe er uklart før vi starter.
+\end{quote}
+
+\subsection*{Scenario}
+\begin{quote}\itshape
+Du er nettansvarlig hos Headspin. Oppgaven er å sette opp overvåkning for en ny kundeside, kontrollere eksisterende data og rydde opp i listen over nettsteder.
+\end{quote}
+
+\subsection*{Testoppgaver (leses høyt)}
+\begin{enumerate}[nosep]
+  \item Logg inn med \texttt{test@test.no} / \texttt{Passord123}.  
+  \item Legg til \texttt{headspin.no}, slå på varsler, sett sjekk intervall til 30 sekunder og legg inn e‑post \texttt{test@test.no} for notifikasjoner.  
+  \item Finn den nye siden i listen (søke, filtrere eller bla) og åpne detaljvisningen.  
+  \item Gå tilbake til dashbordet og åpne \texttt{sj.no}. Vis statistikk for siste 30 dager.  
+  \item Rediger \texttt{sj.no}: sett responstid grense til 300 ms og lagre.  
+  \item Slett en valgfri nettside og logg deretter ut.
+\end{enumerate}
+
+\subsection*{Intervjuguide etter test}
+\begin{enumerate}[nosep]
+  \item Hvordan opplevde du det å bruke dashboardet i denne casen?  
+  \item Var det lett eller vanskelig å finne frem til de ulike funksjonene?  
+  \item Ble noe i grensesnittet uklart eller tidkrevende å forstå?  
+  \item Fant du all informasjonen du forventet? Hva savnet du eventuelt?  
+  \item Er det funksjoner du mener mangler i denne versjonen?  
+  \item Hva synes du om designet og det visuelle uttrykket?  
+  \item Hvis du skulle brukt systemet i arbeidshverdagen, hva ville du endret eller forbedret først?  
+  \item Er det noe vi ikke har spurt om som du mener er viktig å nevne?
+\end{enumerate}
+
+\subsection*{Observasjonsfokus}
+\begin{itemize}[nosep]
+  \item Oppdager brukeren hovedhandlingene uten veiledning?  
+  \item Forstår bruker varsler, grafer og historikk?  
+  \item Navigerer bruker effektivt mellom hoved visninger og detaljer?  
+  \item Reagerer bruker på responstid, layout eller ikonforståelse?  
+\end{itemize}

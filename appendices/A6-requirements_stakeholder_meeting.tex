@@ -1,0 +1,44 @@
+\section{Requirements After Stakeholder Clarification Meeting}
+\label{app:req_from_stakeholder}
+
+\section*{Introduction}
+
+This appendix presents the updated requirement list following our clarification meeting with Headspin AS  (see Section~\ref{subsec:req_stakeholder}). The conversation helped us understand user roles more clearly and led to two new functional requirements related to personalised dashboards (F7–F8). Non-functional requirements remained unchanged.
+
+\section*{Functional requirements}
+\begin{table}[H]
+\centering
+\caption{Functional requirements (after stakeholder meeting)}
+\label{tab:appF-functional}
+\begin{tabular}{|c|p{0.72\linewidth}|c|}
+\hline
+\textbf{ID} & \textbf{Requirement Description} & \textbf{Priority} \\ \hline
+F.1 & User can add, edit and delete monitored websites via the user interface.& High \\ \hline
+F.2 & User can set custom check interval per site.& High \\ \hline
+F.3 & Display HTTP status, response time, and uptime history for each website on each dashboard card.& High \\ \hline
+F.4 & Verify that a site is actually up (beyond HTTP 200). & High \\ \hline 
+ F.5& Trigger alerts and notifications via e-mail or sms.&Medium \\\hline\hline \hline
+F.6& Implement user authentication with personalized dashboards.& Medium\\ \hline
+F.7& Add functionality for filtering and sorting of websites.& Medium \\\hline
+\end{tabular}
+\end{table}
+
+\section*{Non‑functional requirements}
+\begin{table}[H]
+\centering
+\caption{Non‑functional requirements (after stakeholder meeting)}
+\label{tab:appF-nonfunctional}
+\begin{tabular}{|c|p{0.72\linewidth}|c|}
+\hline
+\textbf{ID} & \textbf{Requirement wording (unchanged)} & \textbf{Priority} \\ \hline
+NF.1 & Support monitoring of 50+ sites without noticeable delay.& High \\ \hline
+NF.2 & Website status changes must be easy to interpret at a glance. & High \\ \hline
+NF.3 & Interface must be user‑friendly and intuitive. & High \\ \hline
+NF.4 & Code base should be maintainable and documented. & Medium \\ \hline
+\end{tabular}
+\end{table}
+
+\bigskip
+\noindent
+These updates formed the basis for the prototype we built in the next phase; see Appendix~\ref{app:prototype} for how the requirements developed further.
+

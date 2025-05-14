@@ -1,0 +1,113 @@
+\chapter{Discussion}
+\label{ch:discussion}
+
+%For å sette oppgaven i større perspektiv: Tydelig emphazise hvor mye nytte vi har hatt av å ha brukertester med mye tilbakemelding, og forklare hvordan andre kanskje kan ha nytte av å gjøre noe lignende når de har lignende prosjekter.
+%Også hadde vært veldig bra å knytte dette til noe rundt monitoreringsteori også hvis det er mulig, som joakim sa, men usikker.
+
+This chapter interprets the results of the dashboard development project for Headspin AS, critically analyzing findings in light of the study’s research questions and theoretical framework. It reflects on the usability and functionality outcomes, evaluates methodological strengths and weaknesses, and situates the project within the broader design literature. It concludes by summarizing how the findings respond to the problem statement and offering recommendations for future work.
+
+\section{Research Questions and Study Aims}
+\label{sec:discussion_intro}
+
+This study set out to design, implement, and evaluate a real-time website monitoring dashboard guided by established design theories and agile methods. The following research questions were posed:
+
+\begin{mainbox}
+      \textit{How can design theories and principles of information visualization, combined with an iterative development process, be applied to improve the usability and functionality of a website monitoring dashboard? }
+\end{mainbox}
+
+The subsequent sections discuss how the results presented in Chapter~\ref{ch:results} address the question, followed by a reflection on methodological choices, requirements fulfilment, design decisions, and study limitations.
+
+\section{Discussion of Research Findings}
+\label{sec:discussion_findings}
+
+\subsection{Answering the research question}
+\label{subsec:rq1_discussion}
+
+The development of the monitoring dashboard followed an agile, Kanban-inspired methodology, emphasizing incremental progress and continuous user involvement. This approach facilitated rapid identification and improvement of usability issues throughout scenario-based user testing, think-aloud protocols and semi-structured interviews, providing qualitative insights. These qualitative insights were supported via quantitative \acrshort{sus} scores. The iterative cycles allowed for the timely implementation of improvements, with user feedback directly informing design and functionality enhancements. 
+
+Initial user testing revealed several key challenges that impacted both the functionality and user experience of the dashboard. One major issue involved the placement of core interactive elements, such as filtering and sorting controls. Participants expected these options to be placed intuitively at the top of the interface, not hidden in a side bar. This misalignment violated Norman's principle of visibility, which states that users should easily perceive available actions without needing to search. The side bar also introduced unnecessary visual complexity, diminishing the clarity emphasized by Few's principle of simplicity. In response, the controls were centralized and repositioned within the dashboard, improving accessibility and discoverability of interactive elements. 
+
+Another critical point of feedback concerned the limited amount of information displayed on the dashboard. The early prototype presented minimal data on each website card, which users found insufficient for evaluating system health at a glance. This undermines the dashboard's core function, as described by Stephen Few. He argues that dashboards must consolidate and arrange on a single screen the most important information so it can be monitored at a glance. To address this, the dashboard were redesigned to include overall website status and uptime as well as incident information through a status banner. In addition, the cards displayed on the dashboard include website-specific details about status, response time, uptime, and last HTTP response. These enhancements were introduced keeping Few's principle of simplicity in mind while still providing adequate context for the data, and adhering to Nielsen's heuristic of visibility of system status. 
+
+Visual design presented usability concerns. Participants described the prototype as visually overwhelming, with excessive use of colour. This feedback reflects a failure to apply Nielsen's heuristic of aesthetic and minimalistic design, which that cautions against excessive visual elements that obscure the clarity of important information. In the final design, a natural background was used on the dashboard, with discrete high-contrast status indicators (green, orange, red) that clearly signaled operational state based on reactions or emotions these colours represent. This provided a more balanced visual hierarchy and adhered to universal design principles for accessibility. 
+
+Initially, incidents were tied to alert configurations and disappeared when conditions normalized, leading to user confusion. This design conflicts with Nielsen's heuristic of system status visibility and Norman's principle of feedback, as users lacked persistent, reliable insights into ongoing or resolved issues. In response, the incident system was redesigned to be status-driven and persistent, tracking incidents independently of alert states. The new approach made incident data visible across multiple views, with a banner on both the dashboard and website details page, as well as its own page, incident list. This enabled users to review current and past incidents with more context. This redesign aligned with Nielsen's system status visibility heuristic, Norman's principle of consistency, as status information is presented uniformly across all views of the application, and Few's critical value exception. The redesign enhanced the dashboard's ability to support timely action. 
+
+Taken together, these challenges highlighted critical disconnects between user expectations and the original design. The iterative improvements made in response, guide by user testing and grounded in the theories of Few, Norman, and Nielsen, significantly enhanced usability. These refinements demonstrate how theory informed iteration can bridge the gap between abstract design principles and practical user needs, resulting in a clearer, more effective, and more intuitive monitoring dashboard. 
+
+The visual and interaction design drew heavily from Stephen Few, Don Norman, and Jakob Nielsen. Few's emphasis on clarity and simplicity guided the use of whitespace, card-based layouts, and minimized clutter, ensuring key information was instantly accessible. Norman's principles of affordance and visibility influenced discoverability and interaction flow. For instance, the repositioning of the "Add Website" button and inclusion of back-navigation elements improved usability based on user feedback and Norman's principles.
+
+Nielsen's heuristics further strengthened design coherence. Consistency in iconography, typography, and status indicators reduced cognitive load, while clear colour coding for system status (green, orange, red) provided immediate interpretability. This combination of visual clarity, intuitive interactions, and interface consistent produced a user experience both intuitive and efficient.
+
+Beyond the theoretical frameworks, user testing uncovered additional insights, particularly fro technical users. While design theory emphasizes simplicity, these users expressed a need for advanced diagnostic capabilities. To address this, the team incorporated secondary pages into the system, website details and incident list. This preserved the dashboard's simplicity while offering deeper analytical tools in dedicated views.
+
+The overall development process aligned closely with Sommerville's incremental model, enabling specification, development, and validation to progress occur iteratively and in parallel. This structure allowed the team to respond dynamically to findings from each user testing cycle. Identified usability issues and evolving feature requirement informed incremental improvements, ensuring that each iteration contributed directly to both functional enhancement and improved user experience. 
+
+This adaptive, user-centered process ensured that design theory translated into tangible usability improvements. By systematically applying the principles of Few, Norman, and Nielsen, the project achieved a robust balance between simplicity and depth, creating a dashboard that was both functional and user-friendly. 
+
+
+
+
+
+
+
+
+
+\section{Methodological Reflections}
+\label{sec:methodological_reflection}
+In this section, we reflect on the methods used throughout our project, evaluating how suitable they were based on the results we obtained. We specifically discuss the strengths and limitations of our chosen methods, particularly focusing on user testing and iterative development, and clearly connecting these to our research questions and overall goals.
+
+\subsection{Strengths of the Methodology}
+A major strength of our approach was combining both quantitative and qualitative methods. Scenario-based user testing, together with the System Usability Scale (SUS) provided clear, numerical measures of usability. SUS scores were especially useful because they are simple to interpret and compare against established benchmarks. This gave us a solid understanding of whether our dashboard helped users quickly understand the status of monitored websites, which was our main objective.
+
+Another significant advantage was the iterative and agile development process. Regular feedback from real stakeholders at Headspin ensured that the results reflected realistic usage contexts. Their participation allowed us to constantly adjust and improve the dashboard to meet practical and genuine user needs. Early prototyping clarified user requirements and stakeholder expectations early in the project, reducing misunderstandings and potential mistakes later on.
+
+Structured test plans and consistent evaluation criteria (see Appendices K and L) also contributed significantly to the reliability and consistency of our results across user sessions.
+
+
+\subsection{Methodology Limitations}
+Despite these strengths, our methodology had several limitations. One notable limitation was the relatively small number of participants involved in both user tests. Although SUS provided valuable quantitative data, having more participants would have increased the reliability and the ability to generalize our results. On the other hand, the participants in the user tests were the same people that would actually use the system in the future. This could somewhat compensate for having few participants, as they're feedback could be more relevant than the feedback from potential participants who would not use the system in the future.
+
+One weakness of our iterative development process, was that due to the limited time we had to complete the project, no evaluation of the final product was conducted. This meant we were unable to collect feedback regarding the changes that were implemented to the application after user test 2. Another reason that we did not plan for a separate evaluation of the final product, was that we didn't initially plan on implementing any changes after user test 2. Instead we planned on labelling any new requirements elicited from user test 2 feedback as possible future work. In that case, user test 2 would have served as a form of evaluation the final project. 
+
+Another limitation was related to potential bias, as all test participants were internal stakeholders at Headspin. Their prior familiarity with the system and project goals might have influenced the test outcomes, potentially reducing the external validity of the results.
+
+Time and resource constraints also affected the depth of certain features, such as limited alert delivery channels, and restricted our ability to thoroughly test all aspects, including mobile optimization. Additionally, the implemented user authentication lacked advanced features like rate limiting and password recovery, and our monitoring capabilities were limited to basic HTTP checks.
+
+Finally, accessibility testing was primarily theoretical, relying on established universal design guidelines without practical testing involving diverse user groups. Conducting real-world testing with a broader range of users could have provided deeper insights and enhanced the overall accessibility of the dashboard.
+
+
+\subsection{Evaluation of Method Choices in Relation to Results and Research Questions}
+Overall, our chosen methods effectively addressed the project's research questions. The iterative approach clearly improved both usability and functionality, aligning well with our aims to apply design theories and iterative development processes. However, broader and more comprehensive user testing could have strengthened our findings even further.
+
+Based on these experiences, we recommend more comprehensive user testing in future projects. This should include recruiting larger, more diverse user groups and conducting practical tests focused specifically on accessibility, ensuring that dashboards or similar tools are effective and usable for all potential users.
+
+
+\section{Sustainability}
+\label{sec:sustainability}
+Although the main goal of this project was to design and development a monitoring dashboard, it also touches on broader societal issues addressed by the United Nations Sustainable Development Goals. In particular, with Goal 9: Industry, Innovation and Infrastructure, especially through targets 9.b and 9.c. \autocite{sustainability}. While these targets are directed at supporting innovation and infrastructure in developing countries, their core objectives are relevant globally. 
+
+\subsection{Target 9.b: Support domestic technology development, research and innovation}
+
+The project supports local innovation by creating a custom monitoring system specifically for Headspin AS, rather than relying on generic global platforms. By building a solution that fits their needs, the project encourages technological self-sufficienct and fosters further in-house innovation. 
+
+
+\subsection{Target 9.c: Increase access to information and communications technology}
+
+By automating the monitoring of websites, the system helps ensure that Headspin's clients' websites remain reliable and accessible. Consistent website access is critical for communication, commerce and service delivery in todays market. The dashboard strengthens digital infrastructure for their customers, contributing to more depandable access to technology. 
+
+Overall, this shows how even smaller-scale software development projects can contribute to global sustainability goals by enhancing local innovation and make digital infrastructure more robust and accessible.
+
+
+\section{Study Limitations and Future Work}
+\label{sec:limitations_and_future}
+
+\subsection{Known Limitations}
+
+
+\subsection{Opportunities for Future Development}
+
+
+\section{Conclusion}
+\label{sec:discussion_conclusion}
+

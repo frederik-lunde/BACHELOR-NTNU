@@ -20,20 +20,14 @@
 % Package for some reason needed before the options
 \RequirePackage{pdfpages}                   % including pdf files
 
+
 % One or twosided paging
 \newcommand{\paging}{twoside}
 \DeclareOption{oneside}{
   \renewcommand{\paging}{oneside}
 }
 
-% Title Page
-\DeclareOption{titlepage}{
-    \AtBeginDocument{
-        \begin{titlepage}
-            \maketitle
-        \end{titlepage}
-    }
-}
+
 
 % British
 \newif\ifcapitalize
@@ -165,18 +159,14 @@
 ]{subcaption}
 \RequirePackage{xcolor}                     % selecting text color
 \RequirePackage{emptypage}                  % empty pages should be blank
-\RequirePackage{csquotes}                   % recommended for biblatex
+\RequirePackage{csquotes}  
+% recommended for biblatex
 \RequirePackage[
     backend=biber,
-    style=ieee,
-    maxbibnames=99,
-    minbibnames=3,
-    maxcitenames=2,
-    mincitenames=1,
-    citestyle=numeric-comp,
-    sorting=none,
-    dashed=false
-]{biblatex}                                 % for bibliography
+    style=apa,
+    citestyle=apa,
+    sorting=nyt
+]{biblatex}                                % for bibliography
 \RequirePackage{csvsimple}                  % tables from csv files
 \RequirePackage{booktabs}                   % better formatting of tables
 \RequirePackage{gnuplottex}                 % for generating gnuplots on the fly
@@ -193,6 +183,94 @@
 % Page geometry and spacing (same for even and odd pages)
 \geometry{left=4cm, right=4cm, top=4cm, bottom=4.5cm}
 \frenchspacing
+
+\usepackage{tcolorbox}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{graphicx}   
+\usepackage{tikz}
+\usepackage{fancyhdr}   
+\usepackage{etoolbox} 
+\usepackage{xcolor}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes, calc}
+
+\tcbset{
+  base/.style={
+    enhanced,             % <<< Added for robustness
+    arc=0mm,              % Sharp corners
+    bottomtitle=0.5mm,    % Space below title text
+    boxrule=0mm,          % No main frame border
+    colbacktitle=black!10!white, % Title background color
+    coltitle=black,       % Title text color
+    fonttitle=\bfseries,  % Title font (bold)
+    left=2.5mm,           % Space between left rule and content
+    leftrule=1mm,         % Thickness of the left rule <<< THIS IS THE LINE
+    right=3.5mm,          % Right padding
+    title={#1},           % Use the box argument as the title
+    toptitle=0.75mm,      % Space above title text
+    % Optional: Add some default padding around the main content area
+    boxsep=1mm 
+  }
+}
+
+% --- Your newtcolorbox Definitions ---
+\newtcolorbox{mainbox}[1]{ % Takes 1 argument (for the title)
+  colframe=black,     % Sets the color of the leftrule
+  base={#1}               % Apply the base style, passing the title argument
+}
+
+\newtcolorbox{subbox}[1]{  % Takes 1 argument (for the title)
+  colframe=black!30!white,% Sets the color of the leftrule
+  base={#1}               % Apply the base style, passing the title argument
+}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\usepackage{titlesec}
+
+% Subsection – Stor og tydelig
+\titleformat{\subsection}[block]
+  {\normalfont\Large\bfseries}
+  {\thesubsection}{1em}{}
+\titlespacing*{\subsection}
+  {0pt}{2.5ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% Subsubsection – Litt mindre
+\titleformat{\subsubsection}[block]
+  {\normalfont\large\bfseries}
+  {\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}
+  {0pt}{2ex plus 1ex minus .2ex}{1.2ex plus .2ex}
+
+% Paragraph – Vanlig størrelse, men tydelig skille
+\titleformat{\paragraph}[block]
+  {\normalfont\normalsize\bfseries}
+  {\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+  {0pt}{1.5ex plus 1ex minus .2ex}{1.2ex plus .2ex}
+
+% Subparagraph – Mindre og uten nummer
+\titleformat{\subparagraph}[block]
+  {\normalfont\small\bfseries}
+  {}{1em}{}
+\titlespacing*{\subparagraph}
+  {0pt}{1.2ex plus 0.5ex minus .2ex}{1ex plus .2ex}
+
+
+
+\titleformat{\chapter}[display]
+  {\normalfont\Huge\bfseries}
+  {\chaptername\ \thechapter}{0pt}{\Huge}
+\titlespacing*{\chapter}
+  {0pt}{-20pt}{40pt}
+
 
 % Roman page numbers from the beginning of the document
 \pagenumbering{roman}
@@ -221,20 +299,7 @@
 % Dotted line and tighter vertical spacing for chapters in the table of contents
 \def\l@chapter#1#2{\@dottedtocline{1}{0em}{1.5em}{\bf #1}{\bf #2}}
 
-% Support for included papers (for compiled PhD theses)
-\newcounter{paper}
-\setcounter{paper}{0}
-\def\thepaper{\Roman{paper}}
-\newenvironment{paper}[2]
-{
-    \refstepcounter{paper}
-    \def\include@papername{#1}
-    \chapter*{\papername~\thepaper}
-    \label[paper]{#2}
-}{
-    \cleardoublepage
-    \includepdf[pages=-]{\include@papername}
-}
+
 
 % Allow for two versions of title and authors – full and short
 \def\title#1{\def\@title{#1}\def\@shorttitle{#1}}
@@ -242,15 +307,7 @@
 \def\author#1{\def\@author{#1}\def\@shortauthor{#1}}
 \def\shortauthor#1{\def\@shortauthor{#1}}
 
-% Headers and footers
-\def\ps@ntnuheadings{%
-    \let\@evenfoot\@empty
-    \let\@oddfoot\@empty
-    \def\@evenhead{\small\thepage\hfil\textit{\@shortauthor: \@shorttitle}}
-    \def\@oddhead{\small\textit{\ch@ptermark}\hfil\thepage}
-    \def\chaptermark##1{\def\ch@ptermark{\chaptername\ \thechapter: ##1}}
-}
-\pagestyle{ntnuheadings}
+
 
 % Itemize and enumerate: tighter and with other symbols
 \setlist[enumerate]{itemsep=0mm, topsep=5pt, partopsep=0mm, parsep=0mm}
@@ -264,6 +321,21 @@
 
 % Make \fullcite show all authors irrespectively of maxcitenames
 \preto\fullcite{\AtNextCite{\defcounter{maxnames}{99}}}
+
+% For refrencing after author
+\DeclareCiteCommand{\refcite}
+  {\usebibmacro{prenote}}
+  {%
+    \printtext[parencite]{%
+      \printfield{year}%
+      \ifboolexpr{ test {\iffieldundef{postnote}} }
+        {}
+        {, \printfield{postnote}}%
+    }%
+  }
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
 
 % Colour palette
 \definecolor{thesisblue}{rgb}{.15, .15, .6}

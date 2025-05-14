@@ -1,0 +1,316 @@
+\chapter{Theory}
+\label{ch:theory}
+
+This chapter presents the theoretical framework supporting the development of a dashboard for real-time website monitoring. It focuses on monitoring requirements and visual design principles,  forming the basis for the dashboard's layout and user experience. 
+
+\section{Dashboard Information Overview}
+\label{dashboard_information_overview}
+
+
+\subsection{What is a dashboard?}
+\label{subsec:what_is_dashboard}
+
+The term dashboard is frequently used throughout this thesis. A few years before publishing his book, Information Dashboard Design, Stephen Few published an article in Intelligent Enterprise Magazine where he presented the definition of a dashboard used throughout this thesis:
+
+\textit{“A dashboard is a visual display of the most important information needed to achieve one or more objectives; consolidated and arranged on a single screen so the information can be monitored at a glance.” Stephen Few (Intelligent Enterprise Magazine, “Dashboard Confusion”, 2004)}
+
+A dashboard must be able to quickly point out when something deserves your attention and might require action. It does not need to provide all the necessary details to take action, but it should make it as easy and seamless as possible to find the information you need. A dashboard does its primary job if it tells you with no more than a glance that you should act. This visual display of data offers a unique solution to the problem of information overload, not a complete solution by any means, but one that helps a lot \autocite[p. 28]{FewDashboard}.
+
+\subsubsection{Different types of dashboards}
+\label{subsubsec:different_types_dashboards}
+
+
+Dashboards can be categorized into roles: Strategic, analytic and operational. A website monitoring dashboard would primarily fall under the operational category. Operational dashboards are designed to monitor operations, and must be designed differently from those that support strategic decision-making or data analysis. The dynamic and immediate nature of monitoring operations influences the design of the dashboard. Monitoring operations requires awareness of activities and events that can constantly change and might need someone's attention and action at a moment's notice \autocite[p. 31-32]{FewDashboard}.
+
+\subsection{Dashboard data}
+\label{subsec:dashboard_data}
+
+Although dashboards have a wide range of applications, they primarily display quantitative measures of current events, as they are often used to monitor critical information. Non-quantitative data also plays a role, particularly when dashboards support the management of projects or processes. By including information such as responsible personnel and issues requiring investigation this type of data supports the quantitative measures displayed \autocite[p. 33-36]{FewDashboard}.
+
+
+\subsubsection{Timeframes}
+\label{subsubsec:timeframes}
+
+
+Measurements of what’s currently going on can be expressed in a variety of timeframes. The appropriate timeframe depends on the objectives the dashboard support. Typical examples include year to date, month to date, week to date, and today \autocite[p. 33]{FewDashboard}. 
+
+\subsection{Principles of dashboard design}
+\label{subsec:principles_of_dashboard_design}
+
+
+One of the fundamental challenges of dashboard design is to display a dense array of information in a small amount of space in a manner that communicates this information clearly and immediately. An effective dashboard leverages the power of visual perception to enable rapid sensing and processing of large amounts of information. The root cause of why many dashboards fall short lies in poor visual design, not the technology used. Therefore, visual design must be central to the development process. A fundamental principle is that if the information is important, it deserves to be communicated well \autocite[p. 6]{FewDashboard}.
+
+
+\subsubsection{Exceeding the boundaries of a single screen}
+\label{subsubsec:single_screen_boundaries}
+
+
+A dashboard should confine its display to a single screen. By requiring scrolling or switching between screens, some critical information is lost. In people's short-term memory, we can only hold a few chunks of information. Relying on the mind’s eye to remember information that is no longer visible can lead to information being lost \autocite[p. 39-40]{FewDashboard}.
+
+\subsubsection{Presentation of data}
+\label{subsubsec:presentation_of_data}
+
+
+Supplying inadequate context for the data or displaying it in excessive detail or precision can make the data difficult to interpret. It is important to choose a measure that clearly and efficiently communicates the intended meaning of the data \autocite[p. 43-45]{FewDashboard}.
+
+While a dashboard may display various types of data that require different forms of visualization, introducing a variety of display media without a clear purpose can increase the cognitive load on the user. A dashboard should be designed using the best display means, even if that results in a dashboard filled with multiple instances of the same type of visualization \autocite[p. 50-51]{FewDashboard}.
+
+\subsubsection{Gestalt Principles}
+\label{subsubsec:gestalt_principles}
+
+
+To understand how we perceive pattern, form and organization in what we see, the Gestalt principles of visual perception are often used. In dashboard design these principles offer useful insights on how to intentionally tie data together, separate data, or make some data stand out from the rest \autocite[p. 74]{FewDashboard}.
+
+\subsubsection{The principles of Proximity}
+\label{subsubsec:principle_proximity}
+
+
+The principle of proximity states that we perceive objects that are located near one another as belonging to the same group. On a dashboard you can link data that you want viewers to see together. This can be done by placing related items close to each other, separated from other groups of data. White space alone is usually enough to separate the different groups of data from the data surrounding them \autocite[p. 75]{FewDashboard}.
+
+\subsubsection{The principle of Enclosure}
+\label{subsubsec:principle_enclosure}
+
+
+This principle states that we perceive objects as linked together when they are enclosed by anything that forms a visual border around them. Borders, fill colors, or shading of tables or graphs can be used to group information and set it apart from other information. Even subtle enclosures can strongly influence the perception of grouping \autocite[p. 76]{FewDashboard}.
+
+% muligens fjerne principle of similarity?
+\subsubsection{The principle of Similarity}
+\label{subsubsec:principle_similarity}
+
+
+The principle of similarity states that we tend to group objects that are similar in color, shape, size, and orientation together \autocite[p. 75-76]{FewDashboard}. This principle can be used even when the data that you want to be linked together reside in separate locations on the screen. 
+
+\subsubsection{The principle of Simplicity}
+\label{subsubsec:principle_simplicity}
+
+
+The guiding principle in dashboard design should always be simplicity, displaying the data as clearly and simple as possible. Simplicity is important to preserve the clarity of the data while presenting a great deal of useful information in a set amount of space \autocite[p. 80-81]{FewDashboard}.
+
+The best way to condense information to fit onto a dashboard is in the form of summaries and exceptions. The two most common forms of summaries are sums and averages, representing a set of numbers as one. Using a monitoring dashboard, much of the information it presents is necessary only when something unusual is happening. This type of information is called critical values exceptions. Using critical values exceptions helps keep a clean and understandable dashboard while still presenting information promptly when needed \autocite[p. 82]{FewDashboard}.
+
+\subsection{Designing Dashboards for Usability}
+\label{subsec:designing_dashboards_for_usability}
+
+A well-functioning dashboard has to be designed in a way that makes it easy to use, and do everything it can to support the viewers needs to respond to the information it presents. How pieces of information is arranged in relation to one another can change the way a dashboard functions. It is important to organize information in a way that supports its meaning and use \autocite[p. 139]{FewDashboard}.
+
+To make sure a dashboard is quick and accurate to interpret, maintaining consistency is key. Differences in appearances prompt us as people to search for the significance of the difference, whether it happens consciously or unconsciously. When designing a dashboard, this considers both the visual aspect of display media and the choice of display media. Anything that functions in the same way or provides similar information should look the same \autocite[p. 143]{FewDashboard}.
+
+When designing a dashboard, it is important to make it aesthetically pleasing while the design does not overwhelm, but support the information the dashboard is trying to display. In The Design of Everyday Things, Don Norman argues that the effectiveness of a design should be judged by ease of use and how well it works. This work has been critiqued by designers, who have accused him of ignoring the value that aesthetics bring. In later works, Norman includes the importance and benefits that aesthetically pleasing design brings, without undermining the design principles outlined in his book The Design of Everyday Things \autocite[p. 143]{FewDashboard}. 
+
+\subsubsection{Don Norman's Design Principles}
+\label{subsubsec:don_norman_design_principles}
+
+
+When exploring Stephen Few’s work, the focus has been on what information needs to be included in a dashboard and how to present it in an efficient and meaningful way. Complementing this, Don Norman’s principles for interaction design serve as foundational guidelines to ensure that these elements are not only visible but also understandable and usable for the people interacting with them.
+
+Don Norman (1988) expresses the importance of five of these principles to ensure usability and a good user experience. The principles are grounded in theory, experience, and common sense. Rather than being rigid rules, they serve as flexible guidelines that designers should balance depending on the context. Trade-offs between the different design principles can often arise, especially when attempting to implement multiple principles at once \autocite[p. 30]{sharp-2019}.
+
+\paragraph{Visibility}
+\label{par:visibility}
+
+
+One of the central principles is visibility, which refers to how easily users can identify functionality and understand the different options a system provides. When functions are clearly visible, users are more likely to understand what actions they can perform and what steps they should take next \autocite[p. 26]{sharp-2019}.
+
+\paragraph{Feedback}
+\label{par:feedback}
+
+
+The principle of feedback is closely related to visibility. Feedback refers to the system’s ability to provide information in response to a user's action. Effective feedback helps confirm that an action has occurred and informs the user about its outcome. In interaction design, feedback can be implemented in various ways, such as visual, audio, tactile, verbal, or a combination of these, to reinforce the user’s actions and the results the action brings \autocite[p. 27-28]{sharp-2019}.
+
+\paragraph{Affordance}
+\label{par:affordance}
+
+
+Another key design principle is affordance, which refers to the qualities or attributes of an object that suggest how it can be used. In digital interfaces, such as websites or dashboards, we often rely on perceived affordance, where the user has an understanding of how elements should behave based on conventions and previous experience. This differs from real affordance, which applies to physical objects where functionality is directly related to the characteristics of the object \autocite[p. 29]{sharp-2019}. For example, a button is typically raised and tactile, indicating that it can be pressed. In digital design, this affordance can be mimicked by using visual cues, such as shading, borders, or a 3D appearance, to suggest interactivity. Designing with perceived affordances in mind helps users intuitively understand how to interact with an interface, even in the absence of physical feedback.
+
+\paragraph{Constraints}
+\label{par:constraints}
+
+
+Constraints is another key principle that enhances the user experience by limiting the possible actions that can take place at any given time. By limiting interactions, constraints help guide users to make the right choices, reducing the likelihood of errors. This principle helps to support the principle of affordance, as it reinforces what is possible, by expressing what is not \autocite[p. 28-29]{sharp-2019}. Disabling a button until a required field is filled out prevents a user from submitting an incomplete form, along with highlighting the action the user can take.
+
+\paragraph{Consistency}
+\label{par:consistency}
+
+
+Finally, the principle of consistency refers to the use of similar operations and elements to achieve similar outcomes. When a system works predictably, users are more likely to form an accurate mental model of how it works and behaves. This leads to a more efficient use of the system \autocite[p. 29]{sharp-2019}. Consistency can be applied both visually, through the use of components, fonts, colors, and layout, and functionally, by ensuring that similar actions produce similar outcomes. 
+
+
+\subsection{Connecting Visual and Interaction Design}
+\label{subsubsec:connecting_visual_and_interaction_design}
+
+
+While Stephen Few focuses on how to present data effectively in dashboards and Don Norman emphasizes the user interaction with systems, Jakob Nielsen's 10 general principles, or heuristics, for user interface offer a practical framework that bridges these perspectives.  Nielsen provides broad, experience-based principles that guide visual clarity and functional usability.
+
+\paragraph{Visibility of System Status}
+\label{par:visibility_system_status}
+
+
+Several of Nielsen's Heuristics align directly to both Stephen Few's dashboard design principles and Don Norman's interaction design guidelines. The heuristic, Visibility of System Status, states that users should always be informed about what is going on in the system through timely and clear feedback \autocite{Nielsen1994}. This aligns with Norman's principle of feedback and supports upon Few's requirement for dashboards to immediately indicate whether something requires attention.
+
+\paragraph{Consistency and Standards}
+\label{par:consistency_and_standards}
+
+
+Another strong overlap is found in the Consistency and Standards heuristic, which emphasizes using familiar conventions and maintaining visual and functional consistency throughout a system \autocite{Nielsen1994}. Norman similarly underscores the importance of consistency and affordance to form an accurate model of how a system works and behaves. This is also reflected when Few emphasizes the importance of maintaining consistency in visual elements to reduce cognitive load and avoid overwhelming users with unnecessary variation. 
+
+\paragraph{Aesthetic and Minimalist Design}
+\label{par:aesthetic_and_minimalist_design}
+
+
+Few's principle of simplicity and Norman's acknowledgment of aesthetics enhancing usability closely align with Nielsen's heuristic, Aesthetic and Minimalist Design. All three argue that irrelevant or excessive visual elements obscure the clarity of important information.
+
+\subsection{Universal design}
+\label{subsubsec:universal_design}
+
+
+Universal design refers to the development of products, environments, systems, and services that are accessible and usable by everyone, without requiring specific modifications or specialized adaptations. According to the United Nations, universal design emphasizes inclusivity and equity regardless of age, ability, or circumstance, people should be able to interact effectively and independently with the designed solutions. By incorporating universal design principles from the early stages of development, designers and developers can proactively address barriers that might otherwise limit accessibility, leading to a more inclusive society \autocite{UN}.
+
+In the context of developing systems such as dashboards or interfaces, universal design implies considering factors like readability, intuitive navigation, compatibility with screen readers, adaptable interaction methods, and responsive layouts. This approach ensures that users, regardless of their abilities or limitations, experience equal opportunities to engage with the technology.
+
+
+\subsection{The Role of Colour Theory in Dashboard Design}
+\label{subsec:colour_theory}
+
+Colours play a central role in dashboard design by shaping how users interpret and interact with information. In line with Few's emphasis on clarity and simplicity, and Norman's focus on perceptual understanding, colour serves as a functional element, not just a decorative choice \autocite{Figma}. It can be used to communicate status, highlight anomalies, or visually group related information together. To apply colour efficiently and consistently, a basic understanding of colour theory is essential.
+
+\subsubsection{Colour Theory}
+\label{subsubsec:col_theo}
+
+Colour theory is the study of how we humans perceive colour and how it should be applied. Colour is a sensory phenomenon that requires both theoretical knowledge and practical understanding to be used purposefully and meaningfully \autocite{snl}.
+
+In traditional colour theory, colours are categorized into three main groups: primary, secondary, and tertiary colours. These  are arranged on the colour wheel, a visual tool used to understand the relationship between colours and identify combinations that work well together. Such combinations are referred to as colour harmony \autocite{Canva}.
+
+% Fiks formatering og kildeføring av bilde
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{figures/Ittens colour wheel.png}
+        \caption{Ittens Colour Wheel (https://edouardfouche.com/The-Extended-Color-Wheel-by-Itten/)}
+        \label{sfig:colour_wheel}
+\end{figure}
+% Fiks formatering og kildeføring av bilde
+
+\subsubsection{Colour harmony}
+\label{subsubsec:colour_harmony}
+
+
+Colour harmony referees to colour combinations that are visually appealing and balanced. These combinations are often used to evoke specific emotional responses or to guide attention in design \autocite{ParkUni}. Colour harmony is not just about what looks good together, but also how colours work together to support the intended message or function. 
+
+The colour wheel includes warm colours, such as red, orange, and yellow, and cold colours, such as green, blue and violet, each associated with different emotions and reactions \autocite{Canva}. Warm colours often envoke energy, action, or warmth, while cool colours are linked to calmness, trust, and success \autocite{ParkUni}.
+
+A common form of harmony is the complementary scheme, which uses colours opposite to each other on the wheel. These pairings create strong contrast and are often used to draw attention to key elements. Complementary colours can create a bold and dynamic visual design, making them useful to highlight information, alerts, or otherwise call to action \autocite{Canva}.
+
+Other commonly used harmonies include:
+\begin{itemize}
+    \item \textbf{Analogous Colours:} Neighbouring colours on the wheel that creates a smooth and cohesive look
+    \item \textbf{Monochromatic Colours:} Variations of a single hue, using different shades and tints, for clean and minimalistic designs
+    \item \textbf{Triadic Colours:} Three colours divided evenly on the wheel creating a balanced, yet vibrant colour palette. 
+\end{itemize}
+
+
+\section{Website Monitoring}
+\label{sec:website_monitoring}
+
+
+Website monitoring is the process of tracking the performance and availability of websites and web services to ensure they operate optimally and are accessible to users at all times \autocite{IBMwebmonitor}. This practice is essential for minimizing issues such as downtime, latency, and security vulnerabilities, which can negatively affect user experience and damage an organization’s reputation or impact the organization’s bottom line.
+
+Providing a fast and reliable website is crucial for maintaining a positive user experience in today's market. Slow load times or unresponsive services can lead to user frustration, potentially resulting in loss of customers and revenue. This has led to website monitoring becoming an important part for many businesses to remain competitive.
+
+Furthermore, the growing threat of cybersecurity attacks adds to the importance of website monitoring. According to McKinsey, such attacks are expected to cost businesses over 10 trillion USD each year from 2025 \autocite{McKinsey}. This emphasizes the need for real-time insight into website availability and performance, not just for optimization, but also for ensuring security.
+
+Effective website monitoring contributes to what is known as observability, the ability to understand the internal state of a system based of its external outputs. Observability plays a crucial role in maintaining the availability, performance, and security of software systems \autocite{IBMobservability}. This deeper visibility allows organizations to identify and resolve issues before they escalate, ensuring a consistent and secure user experience.
+
+\subsection{Different types of website monitoring}
+\label{subsec:monitoring_types}
+
+
+Website monitoring is an essential part of ensuring that a website remains accessible, functional, and responsive to user interactions. There are different approaches to website monitoring, depending on which aspects of the website you want to test. These typically fall into these three categories: Availability monitoring, performance monitoring, and functionality monitoring \autocite{Uptrendsmonitoring}.
+
+\subsubsection{Availability monitoring}
+\label{subsubsec:availability_monitoring}
+
+
+Availability monitoring focuses on checking if a website or web service is accessible and to some degree functional. This monitoring type is often concerned with uptime, checking if the site is accessible, and can include monitoring websites, APIs, servers, and domains. Basic availability monitoring checks for a specific respons from \acrshort{http} requests, specific content on the page, or specific status codes. More advanced types of availability monitoring includes verifying SSL certificates, DNS records, email servers, and more \autocite{Uptrendsmonitoring}. These tests can be automated and ran frequently to minimize downtime and detect issues as soon as possible.
+
+\subsubsection{Performance monitoring}
+\label{subsubsec:performance_monitoring}
+
+
+Performance monitoring focuses on how quickly a website or service responds and loads for users. It can take into consideration both front-end browser load time and back-end metrics such as server response time. Issuing alerts for errors, missing content, or slow response times \autocite{Uptrendsmonitoring}.
+
+\subsubsection{Functionality monitoring}
+\label{subsubsec:functionality_monitoring}
+
+
+Functionality monitoring is used to ensure that key functionalities and features of the website work as intended. Simulating user interactions with key components such as log-ins, shopping carts, search bars, and so on. This can catch errors that availability or performance monitoring does not detect \autocite{testRigor}. Only functionality monitoring can confirm that users can complete specific tasks on the site.
+
+Each type of monitoring addresses a different layer of website quality. Availability monitoring ensures that users can reach the site, performance monitoring affects user satisfaction, and functionality monitoring determines whether or not the user can accomplish their goals. Together, these approaches form a comprehensive monitoring strategy to maintain a reliable and user-friendly experience.
+
+\subsection{Key monitoring areas}
+\label{subsec:key_monitoring_areas}
+
+
+Website monitoring can be configured to have a broad scope, tracking overall performance or functionality across the site, or a more narrow scope, focusing on specific areas or factors such as servers or protocols \autocite{IBMwebmonitor}. Below, we will present key monitoring areas to maintain website health, performance, and security.
+
+\subsubsection{Servers and TCP/IP suite}
+\label{subsubsec:servers_tcp/ip_suite}
+
+
+Servers and the TCP/IP (Transmission Control Protocol/Internet Protocol) suite form the backbone of internet communication between servers and between servers and clients. Monitoring server performance can identify whether issues stem from server configuration or network-related problems. TCP/IP monitoring keeps track of communication between servers and clients, which is critical to maintaining site availability and responsiveness \autocite{IBMwebmonitor}.
+
+\subsubsection{Individual web pages}
+\label{subsubsec:individual_web_pages}
+
+
+Website issues are not always system-wide. Sometimes, performance degradation is isolated to a specific page or subpage. Monitoring individual web pages helps detect errors with incorrect code, plug-ins, or add-ons that slow performance, or script conflicts \autocite{IBMwebmonitor}. Monitoring on this level allows organizations to modify specific pages to ensure a consistent user experience.
+
+\subsubsection{SSL Certificates}
+\label{subsubsec:ssl_certs}
+
+
+SSL certificates authenticate a website and enable secure communication through \acrshort{https}, a more secure form of communication than \acrshort{http}. An expired or misconfigured SSL certificate can prevent users from accessing a site or trigger security warnings about page security \autocite{IBMwebmonitor}. Monitoring certificate status and expiration date is essential for both security and user accessibility.
+
+\subsubsection{Domain Name System}
+\label{subsubsec:domain_name_system}
+
+
+The \acrfull{dns} translates human-readable domain names into machine-readable IP addresses to enable user-friendly communication on the Internet \autocite{DNS}. Proper \acrshort{dns} configuration and security ensure that users can reliably access the website they are trying to reach. Monitoring \acrshort{dns} helps detect delays, misconfiguration, or \acrshort{dns} spoofing attacks that can affect accessibility or redirect users to malicious sites. 
+
+\subsection{Monitoring metrics}
+\label{subsec:monitoring_metrics}
+
+
+Monitoring key performance metrics is essential to understand how well a website functions and can identify areas that need attention. Disruption to normal website behavior can be related to an incident, a standalone issue that appears, or something more comprehensive. Some of the most relevant key metrics is introduces below. 
+
+\subsubsection{Uptime}
+\label{subsubsec:uptime}
+
+
+Uptime refers to the percentage of time a website is operational and accessible to users. Uptime monitoring is a continuous process that helps organizations quickly detect and respond to interruptions of service \autocite{IBMwebmonitor}. Early detection will help minimize service disruptions and maintain user trust. 
+
+% Skrive mer om maintaining maximum uptime and 99\% 
+
+\subsubsection{Page speed}
+\label{subsubsec:page_speed}
+
+
+Page speed reflects how quickly content loads and a user can interact with a website. A fast and reliable page speed results in user satisfaction and high search engine results. Page speed is a term used to describe multiple different measures. The time it takes from when a request is sent to the first answer, called time to first byte (\acrshort{ttfb}). How long time it takes a website to be accessible to its user, the page load time, and the time it takes for the largest piece of content to be accessible, the largest contentful paint \autocite{IBMwebmonitor}.
+
+\subsubsection{Error rate}
+\label{subsubsec:error_rate}
+
+
+This metric measures the number of errors that occur concerning the total number of user requests. Common errors include 404 (page not found), 500 (internal server error), and other client- or server-side failures \autocite{IBMwebmonitor}. A high error rate can indicate underlying technical problems that may negatively affect site functionality. By tracking, analyzing, and troubleshooting these errors, you can quickly diagnose bugs and issues that can reduce performance and harm the user experience \autocite{akamai}.
+ 
+
+
+\section{Theoretical Relevance to Research Questions}
+\label{sec:what_why}
+
+What is a dashboard?
+How do you monitor?
+Key areas to monitor
+Different monitoring metrics
+Different types of dashboards
+Dashboard data
+Resten av designteorien

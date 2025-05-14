@@ -1,39 +1,118 @@
-\documentclass[british,titlepage]{ntnuthesis}
+\documentclass[british,titlepage, oneside]{ntnuthesis}
 
-\title{An NTNU Thesis \LaTeX{} Document Class}
-\shorttitle{An NTNU Thesis Document Class}
-\author{Community of Practice in Computer Science Education at NTNU}
-\shortauthor{CoPCSE$@$NTNU}
-\date{CC-BY \ntnuthesisdate}
 
-\addbibresource{thesis.bib}
 
-\input{glossary.tex} % add glossary and acronym lists before document
+\addbibresource{references.bib}
+
+\newcommand{\theoryref}[2]{(see Section~\ref{#1};~\autocite{#2})}
+
+
+\input{glossary.tex} 
+
+% --- Custom Header and Footer ---
+\pagestyle{fancy} 
+\fancyhead[L]{\includegraphics[width=2.5cm]{images/common/NTNU.png}}
+\fancyhead[R]{\includegraphics[width=2.5cm]{images/common/Headspin.png}}
+\fancyhead[C]{}
+\fancyfoot[C]{\thepage}
+\fancyfoot[L]{}
+\fancyfoot[R]{} 
+
+
 
 \begin{document}
 
+% --- Temporarily disable adding ANYTHING to ToC/LoF/LoT ---
+\let\originaladdcontentsline\addcontentsline
+\renewcommand{\addcontentsline}[3]{}
+
+% --- Preface/Abstracts ---
+
 \input{chapters/0a-abstract.tex}
 \input{chapters/0b-sammendrag.tex}
+\input{chapters/0c-preface}
 
+% --- Restore the original \addcontentsline command ---
+\let\addcontentsline\originaladdcontentsline
+
+% --- Table of Contents and Listings ---
 \tableofcontents
 \listoffigures
 \listoftables
 \lstlistoflistings
 
-\printglossary[type=\acronymtype] % Print acronyms
-\printglossary                    % Print glossary
+% --- Glossaries ---
+\printglossary
+\printglossary[type=\acronymtype]
 
+
+% --- Main Chapters ---
 \input{chapters/1-introduction}
-\input{chapters/2-usage.tex}
-\input{chapters/3-structure.tex}
-\input{chapters/4-conclusion.tex}
+\input{chapters/2-theory}
+\input{chapters/3-methodology}
+\input{chapters/4-results}
+\input{chapters/5-discussion}
+\input{chapters/6-conclusion}
 
-\chapter*{\bibname}
+% --- References ---
+\cleardoublepage % 
+\phantomsection 
+\addcontentsline{toc}{chapter}{\bibname}
+\chapter*{\bibname} 
 \printbibliography[heading=none]
 
-\input{chapters/papers.tex}
+% --- Additional Papers ---
+%\input{chapters/papers.tex}
 
+% --- Appendices ---
 \appendix
-\input{appendices/a-appendix.tex}
+\renewcommand{\thesection}{A.\arabic{section}}
+\setcounter{section}{0}
+
+% Manually insert the "A Appendix" heading (styled like a chapter)
+\chapter*{A\quad Appendix}
+\addcontentsline{toc}{chapter}{A\quad Appendix}
+
+\cleardoublepage
+%\input{appendices/A1-headspin_brief}
+\cleardoublepage
+%\input{appendices/A2-prosjektavtale}
+\cleardoublepage
+%\input{appendices/A3-prototype_user_test}
+\cleardoublepage
+%\input{appendices/A4-MVP_user_test}
+\cleardoublepage
+%\input{appendices/A5-requirements_brief}
+\cleardoublepage
+%\input{appendices/A6-requirements_stakeholder_meeting}
+\cleardoublepage
+%\input{appendices/A7-requirements_prototype}
+\cleardoublepage
+%\input{appendices/A9-ER-Diagram}
+\cleardoublepage
+%\input{appendices/A10-domain-model}
+\cleardoublepage
+%\input{appendices/A11-prototype_testplan}
+\cleardoublepage
+%\input{appendices/A12-MVP_testplan}
+\cleardoublepage
+%\input{appendices/A13-sus-questionnaire}
+\cleardoublepage
+%\input{appendices/A14-sus_calculation}
+\cleardoublepage
+%\input{appendices/A16-prototype_figures}
+\cleardoublepage
+%\input{appendices/A17-usability_issues_prototype}
+\cleardoublepage
+%\input{appendices/A18-usability_issues_MVP}
+\cleardoublepage
+%\input{appendices/A19-colourblind-mode}
+%\cleardoublepage
+%\input{appendices/A20-sus_filled_out_forms}
+\cleardoublepage
+%\input{appendices/A21-final_dashboard_figures
+\cleardoublepage
+%\input{appendices/A22-SIKT_meldeskjema}}
+
 
 \end{document}

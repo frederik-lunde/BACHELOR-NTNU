@@ -1,7 +1,77 @@
 \chapter{Introduction}
+\label{ch:introduction}
 
-Over the years, several thesis templates for \LaTeX{} have been developed by different groups at NTNU. Typically, there have been local templates for given study programmes, or different templates for the different study levels – bachelor, master, and \acrshort{phd}.\footnote{see, e.g., \url{https://github.com/COPCSE-NTNU/bachelor-thesis-NTNU} and \url{https://github.com/COPCSE-NTNU/master-theses-NTNU}}
+This chapter introduces the context, motivation, and goals of the thesis. It explains the practical and academic relevance of the project, outlines the problem domain, and defines the scope and structure of the work.
 
-Based on this experience, the \acrfull{CoPCSE}\footnote{\url{https://www.ntnu.no/wiki/display/copcse/Community+of+Practice+in+Computer+Science+Education+Home}} is hereby offering a template that should in principle be applicable for theses at all study levels. It is closely based on the standard \LaTeX{} \texttt{report} document class as well as previous thesis templates. Since the central regulations for thesis design have been relaxed – at least for some of the historical university colleges now part of NTNU – the template has been simlified and put closer to the default \LaTeX{} look and feel.
 
-The purpose of the present document is threefold. It should serve (i) as a description of the document class, (ii) as an example of how to use it, and (iii) as a thesis template.
+\section{Background and Context}
+\label{sec:background}
+
+In an increasingly digital world, businesses depend on reliable websites to maintain their online presence, deliver services, and communicate with users. Website downtime not only results in lost revenue but also undermines user trust and brand credibility. Consequently, there is a growing need for real-time website monitoring solutions that are efficient, scalable, and easy to use.
+
+This project is motivated by the needs of Headspin AS, a communication agency based in Trondheim that designs and hosts websites for a diverse portfolio of clients. While Headspin serves as the main case study, the challenges it faces—such as detecting downtime before clients report it—are representative of issues encountered by many small to mid-sized service providers lacking dedicated IT monitoring teams.
+
+Today, Headspin is responsible for designing and hosting over fifty customer websites, either through traditional web hosting services or large cloud providers.  However, Headspin has encountered a recurring issue in where clients report website outages before the company has detected them. Their current practice involves manually reviewing each website approximately once a month, supplemented by occasional ad-hoc checks.
+
+While Headspin has previously managed high-traffic websites for major events in Trondheim, gaining valuable experience in maintaining stability under pressure, they still lack a tool that allows them to monitor website uptime in real time. There is a clear need for a solution that helps the company automate their monitoring procedures to proactively detect and respond to website issues before they are notified by clients or users. 
+
+While several website monitoring tools exist, they often fall short for small to mid-sized companies that require customizable and scalable solutions. Tools like UptimeRobot \autocite{UptimeRobot} offer basic functionality but are limited in scope unless upgraded to paid plans. More comprehensive platforms such as Grafana \autocite{Grafana} require significant configuration and integration with other tools to function effectively. In this context, Headspin prefers to develop a tailored in-house solution that better fits their specific operational and development needs.
+
+
+\section{Problem Statement}
+\label{sec:problem_statement}
+
+For businesses that manage multiple websites, particularly small to mid-sized digital service providers—ensuring high availability and uninterrupted service is essential. However, many of these organizations rely on manual monitoring routines, which are often inefficient and reactive. This can lead to delays in detecting website downtime or performance issues, potentially impacting user experience and client satisfaction. 
+
+Beyond technical functionality, the effectiveness of a monitoring tool depends significantly on its usability and design quality. A dashboard that fails to communicate critical information clearly or requires extensive effort to operate may reduce user trust and responsiveness, even if it functions technically as intended. As such, the challenge lies not only in building a monitoring system, but in designing one that effectively conveys system status through intuitive visual interfaces, grounded in design theory and best practices in information visualization.
+
+This thesis investigates how a monitoring dashboard can be designed to effectively support real-time website availability, with an emphasis on usability, and iterative refinement based on user feedback. While the project is motivated by the needs of Headspin AS, the aim is to develop insights applicable to other similar organizations seeking customizable, user-centered monitoring tools.
+
+To thoroughly explore the process of designing and developing a functional website monitoring dashboard, we have formulated the following research question:
+
+\subsection{Research Question}
+
+How can design theories and principles of information visualization, combined with an iterative development process, be applied to improve the usability and functionality of a website monitoring dashboard?
+
+
+\section{Domain Specific Concepts and Terminology}
+
+This section introduces important domain specific terms and concepts used throughout the thesis. Each term is briefly defined here and will be further elaborated in later chapters where relevant. 
+
+\paragraph{Dashboard}
+A dashboard is a visual interface that displays key information in a clear format. In this project, it is used to monitor the availability and status of websites in real time.
+
+\paragraph{Website Monitoring}
+Website monitoring includes a number of processes involving checking whether a website is accessible and working as expected. It entails detecting problems that may prevent users from reaching or using the website.
+
+\paragraph{Availability}
+Availability refers to the amount of time a website is up and running without interruptions.
+
+\paragraph{Usability}
+Usability refers to how easy and efficient a system is to use for its intended users. A system with good usability allows users to complete tasks with minimal effort, confusion, or error.
+
+\paragraph{Iterative Development}
+Iterative development is a way to build software in small steps, where each version is improved based on feedback and testing. This allows changes to be made throughout the development process.
+
+\section{Thesis Structure}
+\label{sec:thesis_structure}
+
+The remainder of this thesis is organized as follows:
+
+\begin{itemize}
+    \item \textbf{Chapter~\ref{ch:theory}} outlines the theoretical framework for the project. It covers key concepts in website monitoring, principles of visual and interaction design, and accessibility considerations that informed both the technical and user-facing aspects of the dashboard.
+    
+    \item \textbf{Chapter~\ref{ch:methodology}} details the development and research methods used in the project. This includes stakeholder involvement, iterative development practices, scenario-based user testing, and requirement refinement processes.
+    
+    \item \textbf{Chapter~\ref{ch:results}} presents the results of the project, including user interface evolution, design decisions, usability feedback, SUS scores, and final system features. It also provides a structured overview of requirement fulfilment.
+    
+    \item \textbf{Chapter~\ref{ch:discussion}} interprets the results in relation to the research questions, evaluates the strengths and limitations of the chosen methods, and discusses critical design choices. It also reflects on requirement coverage, sustainability, and future opportunities.
+    
+    \item \textbf{Chapter~\ref{ch:conclusion}} summarises the main findings of the project and reflects on how well the initial goals were met. It also outlines lessons learned and proposes directions for future development and research.
+\end{itemize}
+
+
+
+
+
+

@@ -1,5 +1,4 @@
 
-% From https://www.overleaf.com/learn/latex/Glossaries
 
 \makeglossaries % Prepare for adding glossary entries
 
@@ -11,18 +10,375 @@
 scientific documents}
 }
 
-\newglossaryentry{bibliography}
+\newglossaryentry{iac}
 {
-        name=bibliography,
-        plural=bibliographies,
-        description={A list of the books referred to in a scholarly work,
-typically printed as an appendix}
+    name=Infrastructure as code,
+    description={Writing infrastructure using code, to make it reliable and replicatable. Typically used in the cloud to setup servers or vm's.}
 }
 
-\newglossaryentry{maths}
+\newglossaryentry{plugin}
 {
-    name=mathematics,
-    description={Mathematics is what mathematicians do}
+    name=Plugin,
+    description={is often considered a lightweight software component adding niche functionality to an already existing application or system without disrupting the main code}
+}
+
+\newglossaryentry{functionalreq}{name=Functional Requirements, description={Specifications of what the system should do, including behaviors, features, and interactions}}
+
+\newglossaryentry{nonfunctionalreq}{name=Non-Functional Requirements, description={Constraints or qualities of the system, such as performance, usability, scalability, or reliability}}
+
+\newglossaryentry{javascript}
+{
+    name=JavaScript,
+    description={A high-level, interpreted programming language primarily used for building interactive and dynamic content on websites. It runs in web browsers and enables client-side logic such as DOM manipulation, event handling, and asynchronous communication}
+}
+
+\newglossaryentry{axios}
+{
+    name=Axios,
+    description={A popular promise-based HTTP client library for JavaScript, enabling asynchronous HTTP requests from web browsers and Node.js environments}
+}
+
+\newglossaryentry{mui}
+{
+    name=Material UI,
+    description={A comprehensive and popular React UI component library that implements Google's Material Design system, providing pre-built components for faster web development}
+}
+
+\newglossaryentry{vite}
+{
+    name=Vite,
+    description={A modern frontend build tool and development server designed for speed. It leverages native ES modules during development for extremely fast cold server starts and instant Hot Module Replacement (HMR)}
+}
+
+\newglossaryentry{backend}
+{
+    name=Backend,
+    description={The part of a software system responsible for server-side logic, data management (databases), authentication, APIs, and other functions not directly visible to or interacted with by the end-user. It supports the operations of the frontend}
+}
+
+\newglossaryentry{frontend}
+{
+    name=Frontend,
+    description={The part of a software system that users directly interact with, encompassing the user interface (UI) and user experience (UX). In web development, this typically refers to the code running in the user's browser (HTML, CSS, JavaScript)}
+}
+
+\newglossaryentry{middleware}
+{
+    name=Middleware,
+    description={Software that acts as an intermediary layer between different software components or applications. In web development, it often refers to functions that process requests and responses in the pipeline between the client (frontend) and the server's main application logic (backend), handling tasks like authentication, logging, or data validation}
+}
+
+\newglossaryentry{software}
+{
+    name=Software,
+    description={The set of instructions, data, or programs used to operate computers and execute specific tasks. It is the intangible part of a computer system, distinct from the physical hardware}
+}
+
+\newglossaryentry{hardware}
+{
+    name=Hardware,
+    description={The physical components of a computer system or electronic device, such as the processor (CPU), memory (RAM), storage devices (hard drive, SSD), motherboard, monitor, keyboard, etc. It is the tangible part, distinct from the software}
+}
+
+\newglossaryentry{github}
+{
+    name=Github,
+    description={A widely-used distributed version control system designed to handle everything from small to very large projects with speed and efficiency, tracking changes to source code over time}
+}
+
+\newglossaryentry{fullstack}
+{
+    name=Full-Stack,
+    description={Relating to the development of both the client-side (frontend) and server-side (backend) parts of a web application}
+}
+
+\newglossaryentry{framework}
+{
+    name=Framework,
+    description={A reusable set of libraries, tools, and conventions that provides a foundational structure for developing software applications, often dictating the overall architecture}
+}
+
+
+\newglossaryentry{deployment}
+{
+    name=Deployment,
+    description={The process of making a software application (like the monitoring dashboard) available for use by end-users, typically by hosting it on a server or cloud platform}
+}
+
+\newglossaryentry{database}
+{
+    name=Database,
+    description={An organized collection of structured information, or data, typically stored electronically in a computer system, enabling efficient retrieval, insertion, and updating}
+}
+
+\newglossaryentry{cors}
+{
+    name=CORS (Cross-Origin Resource Sharing),
+    description={A browser security feature and HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources}
+}
+
+\newglossaryentry{reactcomponent}
+{
+    name={Component (React)},
+    description={A reusable, self-contained piece of UI in a React application. Components can manage their own state and receive data via props}
+}
+
+\newglossaryentry{availability}
+{
+    name=Availability,
+    description={A metric representing the percentage of time a system or website is operational and accessible to users during a given period. Often expressed as 'nines' (e.g., 99.9\% availability)}
+}
+
+\newglossaryentry{asyncawait}
+{
+    name=async/await,
+    description={JavaScript syntax built on Promises, allowing asynchronous, non-blocking code to be written in a style that looks more synchronous and is easier to read and maintain}
+}
+
+\newglossaryentry{alerting}
+{
+    name=Alerting,
+    description={The process within a monitoring system responsible for notifying administrators or users when predefined conditions or thresholds related to system health or performance are met or exceeded}
+}
+
+\newglossaryentry{eslint}
+{
+    name=ESLint,
+    description={A widely-used static code analysis tool (linter) for identifying and reporting on problematic patterns found in ECMAScript/JavaScript code, helping to maintain code quality and enforce coding standards}
+}
+
+
+
+
+\newglossaryentry{prettier}
+{
+    name=Prettier,
+    description={An opinionated code formatter that automatically reformats code to ensure consistent style across a project, supporting various languages including JavaScript, TypeScript, CSS, and JSON}
+}
+
+\newglossaryentry{typescript}
+{
+    name=TypeScript,
+    description={An open-source programming language developed by Microsoft, which is a strict syntactical superset of JavaScript and adds optional static typing to the language}
+}
+
+\newglossaryentry{prisma}
+{
+    name=Prisma,
+    description={A modern database toolkit for Node.js and TypeScript, often used as an Object-Relational Mapper (ORM), simplifying database access with type safety and auto-completion}
+}
+
+\newglossaryentry{mysql}
+{
+    name=MySQL,
+    description={A popular open-source relational database management system (RDBMS) based on Structured Query Language (SQL), commonly used in web applications}
+}
+
+\newglossaryentry{bcrypt}
+{
+    name=bcrypt,
+    description={A widely-used password-hashing function designed to be computationally intensive, making it resistant to brute-force attacks. Used for securely storing passwords}
+}
+
+\newglossaryentry{dotenv}
+{
+    name=dotenv,
+    description={A zero-dependency module that loads environment variables from a `.env` file into `process.env` in Node.js applications, keeping sensitive configuration separate from code}
+}
+
+\newglossaryentry{express}
+{
+    name=Express.js,
+    description={A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications, particularly for building APIs}
+}
+
+\newglossaryentry{cron}
+{
+    name=Cron,
+    description={A Node.js module that allows scheduling tasks (jobs) to run periodically at fixed times, dates, or intervals, based on the syntax of the cron time scheduling daemon}
+}
+
+\newglossaryentry{nodemailer}
+{
+    name=Nodemailer,
+    description={A module for Node.js applications to allow easy email sending via various transport methods (SMTP, Sendmail, etc.)}
+}
+
+
+\newglossaryentry{jsonwebtoken}
+{
+    name=jsonwebtoken,
+    description={A popular Node.js library for creating, signing, and verifying JSON Web Tokens (JWTs), commonly used for implementing authentication and information exchange}
+}
+
+
+
+\newglossaryentry{authentication}
+{
+    name=Authentication (AuthN),
+    description={The process of verifying the identity of a user, system, or application attempting to access a resource. Often involves credentials like usernames/passwords or tokens like JWTs}
+}
+
+
+
+
+
+\newglossaryentry{endpoint}
+{
+    name={Endpoint (API)},
+    description={A specific URL within an API that represents a particular resource or function, which clients like Axios interact with via HTTP methods}
+}
+
+\newglossaryentry{polling}
+{
+    name=Polling,
+    description={A technique where a client or monitoring system repeatedly sends requests to a server or target system at regular intervals to check for status updates, new data, or availability}
+}
+
+\newglossaryentry{latency}
+{
+    name=Latency,
+    description={The delay in data transfer, typically measuring the time it takes for a data packet to travel from the source to the destination. It is a component of, but not identical to, total response time}
+}
+
+\newglossaryentry{responsetime}
+{
+    name=Response Time,
+    description={The total time taken from the moment a request is sent to a system (e.g., a website) until a response is received back by the client. Often measured in milliseconds (ms)}
+}
+
+\newglossaryentry{uptime}
+{
+    name=Uptime,
+    description={The duration or percentage of time during which a website, server, or system is operational and accessible. The opposite of downtime}
+}
+
+\newglossaryentry{affordance}
+{
+    name=Affordance,
+    description={A property or feature of an object or interface element (e.g., a button's shape) that suggests how it is intended to be used or interacted with}
+}
+
+\newglossaryentry{usability}
+{
+    name=Usability,
+    description={The ease with which users can employ a user interface to achieve specific goals effectively, efficiently, and satisfactorily}
+}
+
+\newglossaryentry{prototype}
+{
+    name=Prototype,
+    description={An interactive simulation of a user interface used for testing and demonstrating functionality and user flow before full development. Can range from low-fidelity (clickable wireframes) to high-fidelity (closely resembling the final product)}
+}
+
+\newglossaryentry{layout}
+{
+    name=Layout,
+    description={The arrangement and organization of visual elements (like text, images, components) on a page or screen within the user interface}
+}
+
+
+\newglossaryentry{mockup}
+{
+    name=Mockup,
+    description={A static, high-fidelity visual representation of a user interface design, showcasing the look and feel (colors, typography, imagery, layout) but typically without interactivity}
+}
+
+\newglossaryentry{accessibility}
+{
+    name=Accessibility (a11y),
+    description={The design practice of making websites, applications, and tools usable by everyone, including people with disabilities, often following standards like WCAG}
+}
+
+\newglossaryentry{responsivedesign}
+{
+    name=Responsive Design,
+    description={An approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes, adapting the layout and content dynamically}
+}
+
+\newglossaryentry{ganttchart}
+{
+    name=Gant chart,
+    description={A type of bar chart that illustrates a project schedule, displaying tasks against a timeline with their respective start dates, end dates, and durations.}
+}
+
+\newglossaryentry{agile}
+{
+    name=Agile,
+    description={Agile}
+}
+
+
+\newglossaryentry{gui}
+{
+    name={Graphical User Interface},
+    description={A type of user interface that allows users to interact with electronic devices through graphical icons, visual indicators, and pointing devices (like a mouse), instead of text-based commands}
+}
+
+\newglossaryentry{figma}
+{
+    name={Figma},
+    description={is a collaborative design tool used to create user experience prototypes}
+}
+
+\newglossaryentry{headspin}
+{
+    name={Headspin AS},
+    description={is the business which has tasked us with creating the monitoring dashboard}
+}
+
+\newglossaryentry{MVP}
+{
+    name={Minimum Viable Product},
+    description={is a version of a product with just enough features to be usable by early stakeholders who can then provide feedback for future product development}
+}
+
+\newglossaryentry{e2e-testing}
+{
+    name=E2E-testing,
+    description={Short for End-to-End testing, a type of software testing that validates the entire application workflow from start to finish to ensure that all integrated components work together as expected in a real-world scenario}
+}
+
+\newglossaryentry{cypress}
+{
+    name=Cypress,
+    description={A JavaScript-based end-to-end testing framework used for web applications. It provides fast, reliable, and easy-to-write tests that run directly in the browser, enabling developers to simulate real user interactions and verify application behavior}
+}
+
+\newglossaryentry{api-gloss}
+{
+    name=Application Programming Interface,
+    description={is a collection of definitions, instructions, and protocols for building and connecting software. An API is the connection between two programs that exposes the selected business or operational value of one to the other}
+}
+
+\newglossaryentry{thinkaloudprotocol}
+{
+    name=Think-aloud protocol,
+    description={is a way of asking the user to verbalize every action and thought they have during a test of a system or a prototype, which helps with understanding user-reasoning, expectations and any confusion}
+}
+
+\newglossaryentry{ci-cd}
+{
+    name=CI/CD,
+    description={Short for Continuous Integration and Continuous Deployment/Delivery, a software development practice where code changes are automatically tested, integrated, and deployed to production environments. CI ensures code is frequently merged and tested, while CD automates the release process, improving development speed and reliability}
+}
+
+\newglossaryentry{yaml}
+{
+    name=YAML,
+    description={Short for YAML ain’t markup language, which is a recursive acronym. It is often used for configuration files and is specifically made to handle data. It is known for being a human-readable data serialization language}
+}
+
+\newglossaryentry{github-actions}
+{
+    name=GitHub Actions,
+    description={A CI/CD automation tool built into GitHub that enables developers to define workflows for building, testing, and deploying code directly from their repositories. Workflows are triggered by events such as pushes, pull requests, or scheduled times, and are defined using YAML configuration files}
+}
+
+\newglossaryentry{likertscale}
+{
+    name=Likert Scale,
+    description={A likert scale is a rating system used to measure attitudes or opinions by asking participants to indicate their level of agreement or disagreement with a series of statements}
 }
 
 
@@ -31,5 +387,37 @@ typically printed as an appendix}
 % --------------------
 
 \newacronym{phd}{PhD}{philosophiae doctor}
-\newacronym{CoPCSE}{CoPCSE@NTNU}{Community of Practice in Computer ScienceEducation at NTNU}
 \newacronym{gcd}{GCD}{Greatest Common Divisor}
+\newacronym{vcs}{VCS}{Version Control System}
+\newacronym{url}{URL}{Uniform Resource Locator}
+\newacronym{ux}{UX}{User Experience}
+\newacronym{ui}{UI}{User Interface}
+\newacronym{sql}{SQL}{Structured Query Language}
+\newacronym{spa}{SPA}{Single-Page Application}
+\newacronym{npm}{NPM}{Node Package Manager}
+\newacronym{jsx}{JSX}{JavaScript XML}
+\newacronym{json}{JSON}{JavaScript Object Notation}
+\newacronym{js}{JS}{JavaScript}
+\newacronym{https}{HTTPS}{Hypertext Transfer Protocol Secure}
+\newacronym{http}{HTTP}{Hypertext Transfer Protocol}
+\newacronym{html}{HTML}{HyperText Markup Language}
+\newacronym{dom}{DOM}{Document Object Model}
+\newacronym{dns}{DNS}{Domain Name System}
+\newacronym{css}{CSS}{Cascading Style Sheets}
+\newacronym{crud}{CRUD}{Create, Read, Update, Delete}
+\newacronym{api}{API}{Application Programming Interface}
+\newacronym{lamp}{LAMP}{Linux, Apache, MySQL, PHP/Perl/Python}
+\newacronym{jwt}{JWT}{JSON Web Token}
+\newacronym{vm}{VM}{Virtual Machine}
+\newacronym{rest}{REST}{Representational State Transfer}
+\newacronym{sla}{SLA}{Service Level Agreement}
+\newacronym{ucd}{UCD}{User-Centered Design}
+\newacronym{wcag}{WCAG}{Web Content Accessibility Guidelines}
+\newacronym{wip}{WIP}{Work in Progress}
+\newacronym{sus}{SUS}{System Usability Scale}
+\newacronym{mvp}{MVP}{Minimum Viable Product}
+\newacronym{ttfb}{TTFB}{Time to First Byte}
+\newacronym{orm}{ORM}{Object-Relational Mapping}
+
+
+

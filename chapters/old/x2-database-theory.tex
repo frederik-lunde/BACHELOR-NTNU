@@ -1,0 +1,40 @@
+
+\section{Database}
+
+A database is an organized collection of structured information, typically stored in a computer system. Most modern databases are managed using a Database Management System (DBMS), which acts as the interface between the data and the user or application. Together, the data, the DBMS, and associated applications are referred to as a database system \autocite{OracleDB}.
+
+\subsection{Relational Database}
+
+The most common database model in use today is the relational model where data is organized as a set of tables consisting of rows and columns (\href{https://www.oracle.com/database/what-is-database/}{https://www.oracle.com/database/what-is-database/}). The rows represent unique data instances, while each colum corresponds to a specific attribute of the data. To ensure a writable and readable relational database the use of keys are important, specifically primary and foreign keys. Primary keys uniquely identify each row within a table, and foreign keys establish relationships between tables, ensuring data consistency and integrity (Hansen \& Malhaug, 2020, p. 50-53) .
+
+The structure of a relational database enables for efficient data processing, querying, and organization. Interacting with relational databases is primarily done through Structured Query Language (SQL), a standard language used for querying, manipulating, and defining data (\href{https://www.oracle.com/database/what-is-database/}{https://www.oracle.com/database/what-is-database/}).
+
+\subsubsection{Object-relational mapping}
+
+Object relational mapping (ORM) is a technique used to bridge the gap between object-oriented programming languages and relational databases (\href{https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/}{https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/} ). It allows developers to interact with the database using familiar programming languages rather than writing raw SQL queries. ORM simplifies the process of creating, reading, updating, and deleting data (CRUD) by mapping database tables as classes and individual rows as objects in the code. This speeds up development and improves code readability and maintainability (\href{https://www.altexsoft.com/blog/orm-object-relational-mapping/}{https://www.altexsoft.com/blog/orm-object-relational-mapping/} ). 
+
+% Finne relevant bilde/modell?
+
+\subsection{Database security}
+
+Storing and managing digital information involves inherent risks, making security an essential aspect of the process. It includes safeguarding data throughout its entire lifecycle, the retrieval, storrage, processing, and transmission of data. This has led to the three foundational principles of confidentiality, integrity, and availability, commonly known as the CIA Triad (Diaz, 2022, page. 2)
+
+Database security refers to the collection of tools, controls, and measures implemented to preserve the confidentiality, integrity, and availability of data within a database system (\href{https://www.ibm.com/think/topics/database-security}{https://www.ibm.com/think/topics/database-security} ). This includes the design, configuration, and controls embedded directly into the database management system (DBMS) (Diaz, 2022, page 7). 
+
+\subsubsection{Confidentiality}
+
+Confidentiality involves safeguarding information from unauthorized access, ensuring that sensitive data remains accessible only to authorized individuals, applications, or system services (Diaz, 2022, page. 2).  To ensure confidentiality in regards to a database, access to data must be strictly controlled. This can be achieved through database privileges, determining which operations a user is allowed to perform, or through encryption of stored data. Privileges are typically managed by the DBMS and allow control over access to tables, columns, and even specific rows in the database. Encryption can be applied at the storage or application level, ensuring that only users with the correct credentials can access sensitive data (Diaz, 2022, page 7).
+
+Encryption is a security measure that transforms data from a readable form to a scrambled ciphertext using cryptographic algorithms and keys. This ensures that only authorized users can decrypt and read the original data (Diaz, 2022, page 153-154). Another technique used to protect the confidentiality and integrity of stored data is hashing. Hashing is a one-way scrambling of data, often used to ensure password safety and data integrity. Providing a hashed form of a password during encryption adds an extra layer of security (Diaz, 2022, Page 156). Many password-based mechanisms use an additional security control called salting. Salting enhances hashing by adding a random value to the data before it is hashed. This ensures the uniqueness of the hashes as well as secures against attacks by creating unique values (Diaz, 2022, page 162).
+
+\subsubsection{Integrity}
+
+Integrity refers to ensuring that data remains accurate, trustworthy, and unaltered unless modified by authorized means. This principle serves two main goals. The first goal is to maintain the accuracy and reliability of information. Data should correctly reflect the real-world situation it represents (Diaz, 2022, page. 2).
+
+The second goal is to ensure consistency among related pieces of information. If one element of data is modified, all associated or dependent data must also be updated accordingly. Failing to do so can lead to inconsistencies (Diaz, 2022, page. 2-3).
+
+Database integrity focuses on maintaining the accuracy and consistency of stored data. Several methods support this, including database design, normalization, and the use of entity and referential integrity constraints. These techniques help ensure that relationships between tables remain logically correct, such as ensuring a foreign key in one table always corresponds to a valid primary key in another (Diaz, 2022, page 23-25).
+
+\subsubsection{Availability}
+
+Availability focuses on minimizing downtime and disruption of service. In the context of a database, this means that authorized users should be able to access the database and its contents whenever needed in a timely fashion. This is a critical aspect of database security, as data becomes ineffective if it cannot be retrieved when needed. To support this, DBMSs typically include built-in tools for backup and recovery, allowing data to be restored in case of corruption or loss. Ensuring high availability may also involve implementing system redundancy, clustering, and failover solutions (Diaz, 2022, page 30-31).
